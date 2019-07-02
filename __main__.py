@@ -1,3 +1,4 @@
+import os
 import sys
 import time
 from datetime import datetime
@@ -77,7 +78,10 @@ def crawling_nene():
 
     # store
     table = pd.DataFrame(results, columns=['name', 'address', 'sido', 'gubun'])
-    table.to_csv('__results__/nene.csv', encoding='utf-8', mode='w', index=True)
+
+    # os.path.dirname: 상위 디렉토리
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+    table.to_csv('/root/crawling_results/nene.csv', encoding='utf-8', mode='w', index=True)
 
 
 def crawling_kyochon():
