@@ -3,7 +3,7 @@ from datetime import datetime
 import ssl
 from urllib.request import Request, urlopen
 
-import pandas as pd
+# import pandas as pd
 from bs4 import BeautifulSoup
 
 def crawling(
